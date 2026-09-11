@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Travello
 
-## Getting Started
+Travello is a responsive travel-booking interface prototype for exploring destinations, tour cards, and a detailed Dubai itinerary.
 
-First, run the development server:
+## Core features
+
+- Featured destination and tour-package cards with durations, ratings, itineraries, and displayed prices.
+- Detailed trip page with gallery, duration and route selectors, highlights, itinerary, reviews, and package information.
+- Login/register, currency picker, search, callback request, and enquiry interface components.
+- Tourism-board content and responsive navigation.
+- Animated interactions built with Framer Motion.
+
+## Technology stack
+
+- Next.js 14 and React 18
+- JavaScript and JSX
+- Tailwind CSS and Radix UI
+- Framer Motion and Lucide icons
+
+## Prerequisites
+
+- Node.js 20 or newer
+- npm (a `package-lock.json` is included)
+
+## Local setup
 
 ```bash
+git clone https://github.com/varunisrani/travello.git
+cd travello
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server is available at `http://localhost:3000` by default.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To create and serve a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+The manifest also defines `npm run lint`.
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The current source does not read any environment variables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```text
+src/app/          Primary App Router pages and global styles
+src/components/   Tour listing, booking detail, navigation, forms, and UI primitives
+src/lib/          Shared styling utility
+app/              Additional legacy/duplicate App Router pages
+public/           Static assets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Status and limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a static front-end prototype. Tour listings, reviews, prices, and itineraries are embedded in components; search, login, registration, callback, and enquiry forms are not connected to a backend or payment/booking system. Several images are loaded from third-party hosts, and the repository contains overlapping `app/` and `src/app/` page trees.
